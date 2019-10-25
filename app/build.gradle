@@ -31,6 +31,10 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '2.0' //version required
+    }
 }
 
 dependencies {
