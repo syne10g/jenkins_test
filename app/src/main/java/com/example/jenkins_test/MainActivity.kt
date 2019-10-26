@@ -8,6 +8,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    var i = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,10 +25,17 @@ class MainActivity : AppCompatActivity() {
         val green = R.color.green
         val black = R.color.black
 
-        val colorName = listOf(black, red, white, green, blue)
+        val colorList = listOf(black, red, white, green, blue)
 
-        iv_android.setOnClickListener {
-            it.setBackgroundColor(colorName.random())
+        cl_container.setOnClickListener {
+            it.setBackgroundColor(colorList[i])
+            i++
+
+            if (i == colorList.size) {
+                i = 0
+            }
         }
+
+
     }
 }
