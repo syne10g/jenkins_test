@@ -14,26 +14,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    signingConfigs {
-        release {
-            storeFile file("FILENAME.keystore.jks")
-            storePassword "YOUR_KEYSTORE_PASSWORD"
-            keyAlias "YOUR_KEY_ALIAS"
-            keyPassword "YOUR_KEY_PASSWORD"
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
-    }
-
-    task wrapper(type: Wrapper) {
-        gradleVersion = '2.0' //version required
     }
 }
 
