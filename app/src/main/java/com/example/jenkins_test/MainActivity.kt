@@ -2,7 +2,6 @@ package com.example.jenkins_test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.CalendarContract
 import androidx.annotation.ColorRes
 import kotlinx.android.synthetic.main.activity_main.*
 
